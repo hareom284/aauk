@@ -35,7 +35,7 @@
         <!-- Sidebar Nav -->
         @include('partials.menu')
 
-        <div class="content">
+        <div class="content pl-3">
             @yield('content')
             <!-- Footer -->
             @include('partials.footer')

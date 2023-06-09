@@ -9526,15 +9526,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-info {
-    color: #fff;
-    background-color: #474dee;
-    border-color: #474dee;
+    color: #000;
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
 }
 
 .btn-info:hover {
-    color: #fff;
-    background-color: #242beb;
-    border-color: #1820ea;
+    color: #000;
+    background-color: #31d2f3;
+    border-color: #31d2f3;
 }
 
 .btn-info:focus,

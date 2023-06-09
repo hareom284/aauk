@@ -4,7 +4,7 @@
 
         <!-- Dashboard -->
         <li class="side-nav-menu-item active">
-            <a class="side-nav-menu-link media align-items-center" href="   /">
+            <a class="side-nav-menu-link media align-items-center" href="{{route('home')}}">
                 <span class="side-nav-menu-icon d-flex mr-3">
                     <i class="gd-dashboard"></i>
                 </span>
