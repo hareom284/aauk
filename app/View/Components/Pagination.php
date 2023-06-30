@@ -8,20 +8,19 @@ use Illuminate\View\Component;
 
 class Pagination extends Component
 {
-    public $data;
+    public $permissions;
     /**
      * Create a new component instance.
      */
-    public function __construct($data)
+    public function __construct($permissions)
     {
-        $this->data = $data;
-        // dd($this->data);
+        $this->permissions = $permissions;
     }
 
     /**
      * Get the view / contents that represent the component.
      */
-    public function render()
+    public function render(): View|Closure|string
     {
         return view('components.pagination');
     }

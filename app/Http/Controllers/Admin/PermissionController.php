@@ -14,9 +14,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::paginate(10);
-        // return $permissions;
-        return view("admin.permissions.index",compact('permissions'));
+        $permissions = Permission::latest('created_at')->paginate(10);
+        return view("admin.permissions.index", compact('permissions'));
     }
 
     /**
@@ -24,8 +23,6 @@ class PermissionController extends Controller
      */
     public function create()
     {
-
-
         return view("admin.permissions.create");
     }
 
@@ -35,7 +32,7 @@ class PermissionController extends Controller
     public function store(StorePermissionRequest $request)
     {
         Permission::create($request->all());
-        return view('admin.permissions.index');
+        return to_route('permissions.index');
     }
 
     /**
@@ -49,24 +46,26 @@ class PermissionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Permission $permission)
     {
-        //
+        return view('admin.permissions.edit',compact("permission"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Permission $permission)
     {
-        //
+        $permission->update($request->all());
+        return to_route('permissions.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Permission $permission)
     {
-        //
+        $permission->delete();
+        return to_route('permissions.index');
     }
 }

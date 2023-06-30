@@ -30,7 +30,7 @@
                             </form>
                         </div>
                         <div class="h3">
-                            <a class="btn btn-info" href="{{ route('permissions.create') }}">Create</a>
+                            <a class="btn btn-info" href="{{ route('users.create') }}">Create</a>
                         </div>
                     </div>
 
@@ -47,19 +47,19 @@
                             </thead>
                             <tbody>
 
-                                @foreach ($permissions as $id => $permission)
+                                @foreach ($users as $id => $user)
                                     <tr>
                                         <td class="py-3">{{++$id}}</td>
-                                        <td class="py-3">{{$permission->name}}</td>
+                                        <td class="py-3">{{$user->name}}</td>
                                         <td class="py-3">
                                             <div class="d-flex">
-                                                <a class="link-dark btn d-inline-block" href="{{ route('permissions.edit',$permission)}}">
+                                                <a class="link-dark btn d-inline-block" href="{{ route('users.edit',$user)}}">
                                                     <i class="gd-pencil icon-text"></i>
                                                 </a>
 
                                                 <form
                                                 method="POST"
-                                                action="{{route("permissions.destroy",$permission)}}"
+                                                action="{{route("users.destroy",$user)}}"
                                                 class="form-inline px-3"
                                                 >
                                                 @csrf
@@ -75,7 +75,7 @@
 
                             </tbody>
                         </table>
-                        {{ $permissions->links() }}
+                        {{ $users->links() }}
                     </div>
                     <!-- End Users -->
                 </div>

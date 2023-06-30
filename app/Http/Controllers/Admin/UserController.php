@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -12,7 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::latest()->paginate(10);
+        return view("admin.users.index",compact("users"));
     }
 
     /**
@@ -20,7 +22,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -28,7 +30,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->all();
+        return to_route('users.index');
     }
 
     /**
@@ -42,24 +45,28 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $user)
     {
-        //
+        return view("admin.users.edit",compact("user"));
+        return to_route('users.index');
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->update($request->all()); 
+        return to_route('users.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return to_route('users.index');
     }
 }

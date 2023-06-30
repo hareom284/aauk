@@ -30,17 +30,17 @@
             <!-- Users: subUsers -->
             <ul id="userManagement" class="side-nav-menu side-nav-menu-second-level mb-0">
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="users.html">
+                    <a class="side-nav-menu-link" href="{{route('permissions.index')}}">
                         {{ trans('menu.menu_items.user_management.modules.permissions') }}
                     </a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="user-edit.html">
+                    <a class="side-nav-menu-link" href="{{route('roles.index')}}">
                         {{ trans('menu.menu_items.user_management.modules.roles') }}
                     </a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="user-edit.html">
+                    <a class="side-nav-menu-link" href="{{route("users.index")}}">
                         {{ trans('menu.menu_items.user_management.modules.users') }}
                     </a>
                 </li>

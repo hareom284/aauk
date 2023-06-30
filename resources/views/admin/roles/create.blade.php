@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 
-
 @section('content')
     <div class="content">
         <div class="py-4 px-3 px-md-4">
@@ -8,9 +7,9 @@
 
                 <div class="card-body">
 
-                    <x-breadcrumb root="Permissions" current="Create Permission"/>
+                    <x-breadcrumb root="Roles" current="Create Role"/>
 
-                    <x-card-info info="Create New Permission"/>
+                    <x-card-info info="Create New Role"/>
 
                     <div>
                         <form method="POST" action="{{route('permissions.store')}}">

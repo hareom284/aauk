@@ -13,6 +13,9 @@ class InputText extends Component
     public string $label;
     public string $name;
     public string $placeholder;
+    public ?string $className;
+
+    public ?string $value;
 
     /**
      * Create a new component instance.
@@ -21,13 +24,17 @@ class InputText extends Component
         $type,
         $label,
         $name,
-        $placeholder
+        $placeholder,
+        $className ="",
+        $value =""
     ) {
 
         $this->type = $type;
         $this->label = $label;
         $this->name = $name;
         $this->placeholder = $placeholder;
+        $this->className = $className;
+        $this->value = $value;
     }
 
     /**
