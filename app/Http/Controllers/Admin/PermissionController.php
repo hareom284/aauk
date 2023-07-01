@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StorePermissionRequest;
-use Spatie\Permission\Models\Permission;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller
 {
@@ -15,7 +15,8 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::latest('created_at')->paginate(10);
-        return view("admin.permissions.index", compact('permissions'));
+
+        return view('admin.permissions.index', compact('permissions'));
     }
 
     /**
@@ -23,7 +24,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view("admin.permissions.create");
+        return view('admin.permissions.create');
     }
 
     /**
@@ -32,6 +33,7 @@ class PermissionController extends Controller
     public function store(StorePermissionRequest $request)
     {
         Permission::create($request->all());
+
         return to_route('permissions.index');
     }
 
@@ -48,7 +50,7 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        return view('admin.permissions.edit',compact("permission"));
+        return view('admin.permissions.edit', compact('permission'));
     }
 
     /**
@@ -57,6 +59,7 @@ class PermissionController extends Controller
     public function update(Request $request, Permission $permission)
     {
         $permission->update($request->all());
+
         return to_route('permissions.index');
     }
 
@@ -66,6 +69,7 @@ class PermissionController extends Controller
     public function destroy(Permission $permission)
     {
         $permission->delete();
+
         return to_route('permissions.index');
     }
 }

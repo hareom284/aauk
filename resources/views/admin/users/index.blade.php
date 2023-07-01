@@ -25,7 +25,7 @@
                                 <div class="d-flex">
                                     <x-forms.input-text type="text" label="" name="userlist"
                                         placeholder="Please Search User" className="pr-3" />
-                                    <x-button type="submit" btntype="back" label="Search ..." />
+                                    <x-button type="submit" btntype="back" label="Search" />
                                 </div>
                             </form>
                         </div>
@@ -42,6 +42,7 @@
                                 <tr>
                                     <th class="font-weight-semi-bold border-top-0 py-2">#</th>
                                     <th class="font-weight-semi-bold border-top-0 py-2">Name</th>
+                                    <th class="font-weight-semi-bold border-top-0 py-2">Email</th>
                                     <th class="font-weight-semi-bold border-top-0 py-2">Actions</th>
                                 </tr>
                             </thead>
@@ -51,6 +52,7 @@
                                     <tr>
                                         <td class="py-3">{{++$id}}</td>
                                         <td class="py-3">{{$user->name}}</td>
+                                        <td class="py-3">{{$user->email}}</td>
                                         <td class="py-3">
                                             <div class="d-flex">
                                                 <a class="link-dark btn d-inline-block" href="{{ route('users.edit',$user)}}">

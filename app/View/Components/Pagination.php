@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class Pagination extends Component
 {
     public $permissions;
+
     /**
      * Create a new component instance.
      */

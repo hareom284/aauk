@@ -8,11 +8,14 @@ use Illuminate\View\Component;
 
 class InputText extends Component
 {
-
     public string $type;
+
     public string $label;
+
     public string $name;
+
     public string $placeholder;
+
     public ?string $className;
 
     public ?string $value;
@@ -25,8 +28,8 @@ class InputText extends Component
         $label,
         $name,
         $placeholder,
-        $className ="",
-        $value =""
+        $className = '',
+        $value = ''
     ) {
 
         $this->type = $type;

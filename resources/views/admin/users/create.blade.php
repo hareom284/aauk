@@ -7,7 +7,7 @@
             <div class="card mb-3 mb-md-4">
 
                 <div class="card-body">
-                    
+
                     <x-breadcrumb root="Users" current="Create User"/>
 
                     <x-card-info info="Create New User"/>
@@ -30,7 +30,7 @@
                                     type="email"
                                     label="Email"
                                     name="email"
-                                    value="{{'email'}}"
+                                    value="{{old('email')}}"
                                     placeholder="Please Enter your Email"
                                     />
                                 </div>
@@ -39,7 +39,6 @@
                                     type="password"
                                     label="Password"
                                     name="password"
-                                    value="{{'password'}}"
                                     placeholder="Please Enter your Password"
                                     />
                                 </div>

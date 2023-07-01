@@ -26,7 +26,7 @@
 
     {{-- header section start --}}
 
-     @include('partials.header')
+    @include('partials.header')
     {{-- header section end --}}
 
     {{-- main section it contains slider and content view --}}

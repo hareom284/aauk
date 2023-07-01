@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 
@@ -46,7 +45,7 @@ class PermissionTableSeeder extends Seeder
             'create_settings',
             'edit_settings',
             'delete_settings',
-            'access_settings'
+            'access_settings',
         ];
 
         foreach ($permissions as $permission) {

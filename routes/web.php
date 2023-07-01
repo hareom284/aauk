@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +20,10 @@ Route::get('/', function () {
     return view('layouts.admin');
 });
 
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
 
-Route::get("/home",function(){
-return view('home');
-})->name("home");
-
-
-
-Route::resource("permissions",PermissionController::class);
-Route::resource("roles",RoleController::class);
-Route::resource("users",UserController::class);
+Route::resource('permissions', PermissionController::class);
+Route::resource('roles', RoleController::class);
+Route::resource('users', UserController::class);

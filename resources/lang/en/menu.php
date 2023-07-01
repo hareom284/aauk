@@ -1,41 +1,42 @@
 <?php
+
 return [
-    "menu_items" => [
-        "user_management" => [
-            "title"  => "User Management",
-            "modules" => [
-                "permissions" => "Permission",
-                "roles"      => "Role",
-                "users"      => "User"
+    'menu_items' => [
+        'user_management' => [
+            'title' => 'User Management',
+            'modules' => [
+                'permissions' => 'Permission',
+                'roles' => 'Role',
+                'users' => 'User',
             ],
         ],
-        "home" => "Home",
-        "requisition" => [
-            "title" => "Requisition"
+        'home' => 'Home',
+        'requisition' => [
+            'title' => 'Requisition',
         ],
-        "purchaseorder" => [
-            "title" => "Purchase Order"
+        'purchaseorder' => [
+            'title' => 'Purchase Order',
         ],
-        "warehouse" => [
-            "title" => "Warehouse"
+        'warehouse' => [
+            'title' => 'Warehouse',
         ],
-        "testing" => [
-            "title" => "Testing"
+        'testing' => [
+            'title' => 'Testing',
         ],
-        "production" => [
-            "title" => "Production"
+        'production' => [
+            'title' => 'Production',
         ],
-        "dispatch" => [
-            "title" => "Dispatch"
+        'dispatch' => [
+            'title' => 'Dispatch',
         ],
-        "history" => [
-            "title" => "History Report"
+        'history' => [
+            'title' => 'History Report',
         ],
-        "settings" => [
-            "title" => "Settings",
-            "changepassword" => "Change Password",
-            "addcategories" => "Add Categories",
-            "additemname" => "Add Items Names",
+        'settings' => [
+            'title' => 'Settings',
+            'changepassword' => 'Change Password',
+            'addcategories' => 'Add Categories',
+            'additemname' => 'Add Items Names',
         ],
     ],
 ];

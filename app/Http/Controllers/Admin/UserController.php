@@ -14,7 +14,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::latest()->paginate(10);
-        return view("admin.users.index",compact("users"));
+
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -30,7 +31,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        User::create($request->all());
+
         return to_route('users.index');
     }
 
@@ -47,7 +49,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view("admin.users.edit",compact("user"));
+        return view('admin.users.edit', compact('user'));
+
         return to_route('users.index');
 
     }
@@ -57,7 +60,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all()); 
+        $user->update($request->all());
+
         return to_route('users.index');
     }
 
@@ -67,6 +71,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
+
         return to_route('users.index');
     }
 }

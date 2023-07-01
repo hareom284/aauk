@@ -25,7 +25,7 @@
                                 <div class="d-flex">
                                     <x-forms.input-text type="text" label="" name="userlist"
                                         placeholder="Please Search User" className="pr-3" />
-                                    <x-button type="submit" btntype="back" label="Search ..." />
+                                    <x-button type="submit" btntype="back" label="Search" />
                                 </div>
                             </form>
                         </div>

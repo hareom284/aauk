@@ -8,16 +8,17 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
-
     const BUTTON_TYPE = [
-        "create" => "btn-primary",
-        "show" => "btn-info",
-        "back" => "btn-secondary",
-        "delete" => "btn-danger",
+        'create' => 'btn-primary',
+        'show' => 'btn-info',
+        'back' => 'btn-secondary',
+        'delete' => 'btn-danger',
     ];
 
     public $label;
+
     public $type;
+
     public $btntype;
 
     /**
@@ -27,7 +28,7 @@ class Button extends Component
     {
         $this->label = $label;
         $this->type = $type;
-        $this->btntype = self::BUTTON_TYPE[$btntype] ?? "btn-info";
+        $this->btntype = self::BUTTON_TYPE[$btntype] ?? 'btn-info';
     }
 
     /**

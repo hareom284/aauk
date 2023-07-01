@@ -8,8 +8,8 @@ use Illuminate\View\Component;
 
 class CardInfo extends Component
 {
-
     public $info;
+
     /**
      * Create a new component instance.
      */
